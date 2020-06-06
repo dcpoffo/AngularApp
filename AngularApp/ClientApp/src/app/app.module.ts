@@ -9,7 +9,10 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { UsuarioComponent } from './usuario/usuario.component'; 
+import { UsuarioComponent } from './usuario/usuario.component';
+import { UsuarioCadastroComponent } from './usuario/usuario-cadastro.component';
+import { UsuarioApagaComponent } from './usuario/usuario-apaga.component';
+import { UsuarioAtualizaComponent } from './usuario/usuario-atualiza.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,11 @@ import { UsuarioComponent } from './usuario/usuario.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    UsuarioCadastroComponent,
+    UsuarioApagaComponent,
+    UsuarioAtualizaComponent
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,6 +36,9 @@ import { UsuarioComponent } from './usuario/usuario.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'usuarios', component: UsuarioComponent },
+      { path: 'usuarios-cadastra', component: UsuarioCadastroComponent },
+      { path: 'usuarios-apaga', component: UsuarioApagaComponent },
+      { path: 'usuarios-atualiza', component: UsuarioAtualizaComponent },
     ])
   ],
   providers: [],

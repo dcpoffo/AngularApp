@@ -1,16 +1,20 @@
-<table class='table table-striped' aria-labelledby="tableLabel">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Sobrenome</th>
-      <th>E-mail.</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of usuarios">
-      <td>{{ user.nome }}</td>
-      <td>{{ user.sobrenome }}</td>
-      <td>{{ user.email }}</td>
-    </tr>
-  </tbody>
-</table>
+<div>
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>E-mail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usuarios">
+        <td>{{ user.nome }}</td>
+        <td>{{ user.sobrenome }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-usuario-cadastro></app-usuario-cadastro>

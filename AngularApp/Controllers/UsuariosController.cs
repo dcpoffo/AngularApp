@@ -19,15 +19,22 @@ namespace AngularApp.Controllers
             {
                 new Usuario {Nome = "Darlan", Sobrenome = "Poffo", Email = "dcpoffo@gmail.com"},
                 new Usuario {Nome = "Vanessa", Sobrenome = "Tanaka", Email = "vaneyt@gmail.com"},
-                new Usuario {Nome = "Nicolas", Sobrenome = "Tanaka Poffo", Email = "nicolasto@gmail.com"}
+                new Usuario {Nome = "Nicolas", Sobrenome = "Tanaka Poffo", Email = "nicolas@gmail.com"}
             };
         }
 
         [HttpGet]
         [Route("get_usuarios")]
-        public IActionResult Get()
+        public IActionResult GetAll()
         {
             return Ok(_usuarios);
+        }
+
+        [HttpGet]
+        [Route("get_usuario")]
+        public IActionResult Get()
+        {
+            return Ok(_usuarios[0]);
         }
 
         [HttpPost]
