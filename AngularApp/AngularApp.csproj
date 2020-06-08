@@ -24,15 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\app\Usuario\usuario-apaga.component.ts" />
-    <None Remove="ClientApp\src\app\Usuario\usuario-atualiza.component.ts" />
     <None Remove="ClientApp\src\app\Usuario\usuario-cadastro.component.ts" />
     <None Remove="ClientApp\src\app\Usuario\usuario.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\app\Usuario\usuario-apaga.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\Usuario\usuario-atualiza.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Usuario\usuario-cadastro.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Usuario\usuario.component.ts" />
   </ItemGroup>

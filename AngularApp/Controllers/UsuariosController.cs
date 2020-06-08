@@ -14,27 +14,21 @@ namespace AngularApp.Controllers
         private readonly IList<Usuario> _usuarios;
 
         public UsuariosController()
-        {
+        {            
             _usuarios = new List<Usuario>
             {
                 new Usuario {Nome = "Darlan", Sobrenome = "Poffo", Email = "dcpoffo@gmail.com"},
                 new Usuario {Nome = "Vanessa", Sobrenome = "Tanaka", Email = "vaneyt@gmail.com"},
                 new Usuario {Nome = "Nicolas", Sobrenome = "Tanaka Poffo", Email = "nicolas@gmail.com"}
-            };
+             };
+       
         }
 
         [HttpGet]
         [Route("get_usuarios")]
-        public IActionResult GetAll()
-        {
-            return Ok(_usuarios);
-        }
-
-        [HttpGet]
-        [Route("get_usuario")]
         public IActionResult Get()
         {
-            return Ok(_usuarios[0]);
+            return Ok(_usuarios);
         }
 
         [HttpPost]
@@ -44,26 +38,27 @@ namespace AngularApp.Controllers
             _usuarios.Add(usuario);
             return Ok();
         }
-        [HttpPut]
-        [Route("put_usuarios")]
-        public IActionResult Put([FromBody] Usuario usuario)
-        {
-            var usuarioCadastrado = _usuarios.FirstOrDefault(u => u.Nome == usuario.Nome && u.Sobrenome == usuario.Sobrenome);
 
-            if (usuarioCadastrado is null)
-            {
-                return Ok("Usuário não encontrado");
-            }
+        //[HttpPut]
+        //[Route("put_usuarios")]
+        //public IActionResult Put([FromBody] Usuario usuario)
+        //{
+        //    var usuarioCadastrado = _usuarios.FirstOrDefault(u => u.Nome == usuario.Nome && u.Sobrenome == usuario.Sobrenome);
 
-            return Ok();
-        }
+        //    if (usuarioCadastrado is null)
+        //    {
+        //        return Ok("Usuário não encontrado");
+        //    }
 
-        [HttpDelete]
-        [Route("delete_usuarios/{nome}")]
-        public IActionResult Delete([FromRoute] string nome)
-        {
-            _usuarios.Remove(_usuarios.FirstOrDefault(u => u.Nome == nome));
-            return Ok();
-        }
+        //    return Ok();
+        //}
+
+        //[HttpDelete]
+        //[Route("delete_usuarios/{nome}")]
+        //public IActionResult Delete([FromRoute] string nome)
+        //{
+        //    _usuarios.Remove(_usuarios.FirstOrDefault(u => u.Nome == nome));
+        //    return Ok();
+        //}
     }
 }
